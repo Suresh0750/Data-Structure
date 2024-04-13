@@ -21,7 +21,28 @@ function binary(arr,key){
 
 }
 
-console.log(binary([1,2,3,4,5,6],5))
-console.log(binary([1,2,3,4,5,6],6))
-console.log(binary([1,2,3,4,5,6],2))
-console.log(binary([1,2,3,4,5,6],9))
+// console.log(binary([1,2,3,4,5,6],5))
+// console.log(binary([1,2,3,4,5,6],6))
+// console.log(binary([1,2,3,4,5,6],2))
+// console.log(binary([1,2,3,4,5,6],9))
+// console.log(binary([1,2,3,4,5,6],3))
+// console.log(binary([1,2,3,4,5,6],7))
+
+
+function binarySearch(arr,target){
+
+    let left = 0
+    let right = arr.length-1
+    
+
+    while(left<=right){
+
+        let mid = Math.floor((right+left)/2)
+
+        if(target == arr[mid]) return mid
+
+        if(target <arr[mid]) right = mid-1
+        else left = mid+1
+    }
+
+}
