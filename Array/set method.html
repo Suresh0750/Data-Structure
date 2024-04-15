@@ -1,0 +1,56 @@
+
+
+<h1>welcome to set method</h1>
+
+<script>
+
+    const set = new Set([1,2,3,2,5])
+    
+    
+    // console.log(set)
+    set.add(4)                  //* add the element into the object
+    
+    set.delete(3)               //* delete the element from the object
+    
+    set.clear()                 //* clear the object
+    console.log(set.size)       // * total amout of size000
+    for(let key of set){
+        console.log(key)
+        // console.log(set[key])
+    }
+    
+    
+    let checkExitingNum = new Set([1,2,3,4,5,5,5,6,7])
+    
+    for(let key of checkExitingNum){
+    
+        if(checkExitingNum.has(key)){
+            console.log(checkExitingNum.has(key))
+        }
+    }
+    
+    
+    // console.log(checkExitingNum)
+
+    let key = Object.keys(checkExitingNum)  // * empty key we got so checkExitingNum is not normal object is entirely different
+    console.log(key)
+    let values = Object.values(checkExitingNum) // * empty value we got so checkExitingNum is not normal object is entirely different
+
+
+
+    let str = new String('Hello')   // * its work link split
+
+    let keyOfstr = Object.keys(str)  // * here object.keys working so str in an normal object
+    console.log(str)
+
+
+    let str1 = new Set(new String("hello"))  // * its given object but its not normal object 
+
+
+    // ** result : Set(4) {'h', 'e', 'l', 'o'}
+
+    let 
+
+
+
+</script>
