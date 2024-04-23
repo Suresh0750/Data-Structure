@@ -12,7 +12,7 @@
     
     set.delete(3)               //* delete the element from the object
     
-    set.clear()                 //* clear the object
+    // set.clear()                 //* clear the object
     console.log(set.size)       // * total amout of size000
     for(let key of set){
         console.log(key)
@@ -49,8 +49,21 @@
 
     // ** result : Set(4) {'h', 'e', 'l', 'o'}
 
-    let 
+    let mapObj = {
+        name:'suresh',
+        age:21,
+        dep:'Mechanical'
+    }
+
+    let map = new Map(Object.entries(mapObj))
 
 
+    let x = Object.keys(set)  // * this only normal object 
+
+    // # this all use set object
+    
+    let y = [...set.keys()]   
+    let z = [...set.values()]
+    let u = [...set.entries()]
 
 </script>
