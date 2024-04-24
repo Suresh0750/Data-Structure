@@ -79,3 +79,41 @@
         console.log(key)
 
     }
+
+
+
+
+// # keep the map find out count of repeating elsement
+
+let i = 0
+
+while(i<nums.length){
+    
+    map.set(nums[i],(map.get(nums[i]) || 0)+1)
+    
+    i++
+    
+}
+
+// * seperate key and value from the map
+
+const keyMap = [...map.keys()]
+const valuesMap = [...map.values()]
+
+// # keep the set find out unique element 
+
+i= 0
+
+const set1 = new Set()
+
+
+while(i<nums.length){
+    
+    set1.add(nums[i])
+    i++
+}
+
+// * seperate key and value from the set
+
+const keySet = [...set1.keys()]
+const valueSet = [...set1.values()]
