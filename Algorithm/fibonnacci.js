@@ -47,7 +47,8 @@ function arrFibonacci(n){
 
 }
 
-function calculateFibonacci(n){
+function 
+calculateFibonacci(n){
 
     if(n<2) return n
     return calculateFibonacci(n-1)+calculateFibonacci(n-2)

@@ -117,3 +117,51 @@ while(i<nums.length){
 
 const keySet = [...set1.keys()]
 const valueSet = [...set1.values()]
+
+
+
+
+const arr = [1,2,3,4,5,6,7,8,9,8,9]
+
+const map1 = new Map()
+
+
+
+// map1.set(2,5)
+// map1.set("name",'suresh')
+
+// map1.delete("name")
+// map1.clear()
+
+
+// console.log(map1.get("name"))
+
+
+// console.log(map1)
+
+ i = 0
+while(i<arr.length){
+    
+    map1.set(arr[i],(map1.get(arr[i]) || 0)+1)
+    i++
+}
+
+let final = []
+for(let [key,value] of map1.entries()){
+    
+    
+    if(value == 1){
+        final.push(key)
+    }
+    
+}
+console.log(map1)
+
+console.log(final)
+
+
+
+
+
+
+

@@ -16,9 +16,9 @@ function search(arr,target,left,right){
 
     if(arr[mid] == target) return mid
 
-    if(arr[mid]<target) return search(arr,target,left=mid+1,right)
+    if(arr[mid]<target) return search(arr,target,mid+1,right)
 
-    else return search(arr,target,left,right = right-1)
+    else return search(arr,target,left,right-1)
 
 
 }
