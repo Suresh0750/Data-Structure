@@ -162,6 +162,9 @@ console.log(final)
 
 
 
+let n  = 10000
+
+
 
 
 
