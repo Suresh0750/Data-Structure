@@ -74,7 +74,7 @@ function merge(left,right){
 
 
 
-
+// * with extra space
 function quicksort(arr){
 
     if(arr.length<2) return arr
@@ -98,5 +98,82 @@ function quicksort(arr){
 }
 
 
-console.log(quicksort(arr))
+// console.log(quicksort(arr))
 
+// efficient no extra space 
+
+function swap(nums,i,j){
+    let temp = nums[i]
+    nums[i] = nums[j]
+    nums[j] = temp
+}
+
+function partition(arr,low,high){
+
+    let pivot = arr[low]
+    let i = low
+    let j = high
+
+    while(i<j){
+
+        while(arr[i]<=pivot && i<=high-1){
+            i++
+        }
+
+        while(arr[j]>pivot && j>=low+1){
+            j--
+        }
+        if(i<j){
+            swap(arr,i,j)
+        }
+    }
+
+    swap(arr,low,j)
+
+    return j
+}
+
+function quickSort(arr,low,high){
+
+    if(low<high){
+        let pIndex = partition(arr,low,high)
+
+        quickSort(arr,low,pIndex-1)
+        quickSort(arr,pIndex+1,high)
+    }
+
+    return arr
+}
+
+
+// console.log(quickSort(arr,0,arr.length-1))
+
+
+
+//* selection sort
+
+
+
+function selectionSort(arr){
+
+    let min
+    for(let i=0 ;i<arr.length;i++){
+
+        min = i
+        for(let j=i+1;j<arr.length;j++){
+
+            if(arr[min]>arr[j]){
+                min = j
+            }
+        }
+
+        if(min!=i){
+            swap(arr,min,i)
+        }
+    }
+
+    return arr
+}
+
+
+console.log(selectionSort(arr))
