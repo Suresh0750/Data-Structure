@@ -38,7 +38,7 @@ class priority{
         
         
         if(this.heap.length>1){
-            this.shiftDown()
+            this.shifDown()
         }
     }
     shifDown(){
@@ -52,7 +52,7 @@ class priority{
                 smallest = left
             }
             right = (2*index)+2
-            if(right<length && this.heap[smallest].priority>this.heap[right]){
+            if(right<length && this.heap[smallest].priority>this.heap[right].priority){
                 smallest = right
             }
             if(this.heap[index].priority>this.heap[smallest].priority){
